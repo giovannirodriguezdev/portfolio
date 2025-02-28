@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.side-nav {
+    display: grid;
+    justify-items: center;
+    background-color: pink;
+    width: 100px;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    transition: transform .3s ease-in-out;
+    padding: 20px;
+}
+
+.logo {
+
+}
+
+.nav-menu {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    justify-items: center;
+    
+}
+
+li a {
+    text-decoration: none;
+}
+
+.menu-toggle {
+    display: none;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    cursor: pointer;
+    padding: 10px 15px;
+    border: none;
+}
+
+@media screen and (max-width: 768px) {
+    .side-nav {
+        transform: translateX(-100%);
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .side-nav.active {
+        transform: translateX(0);
+    }
+
+    .content {
+        margin-left: 0;
+    }
+}
+
+/* Home Section */
+
+.home-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: aquamarine;
+}
+
+.titles {
+    box-sizing: content-box;
+    display: flex;
+    height: 30px;
+    justify-content: center;
+    /* padding: 50px 50px; */
+
+    /* box-shadow: 0 20px rgba(0, 0, 0, .2); */
+}
+
+.words {
+    overflow: hidden;
+}
+
+span {
+    display: block;
+    height: 100%;
+    font-size: 24px;
+    color: blue;
+    font-weight: bold;
+    text-align: center;
+    animation: spin_words 6s infinite;
+}
+
+@keyframes spin_words {
+    10% {
+        transform: translateY(-112%);
+    }
+
+    25% {
+        transform: translateY(-100%);
+    }
+
+    35% {
+        transform: translateY(-212%);
+    }
+
+    50% {
+        transform: translateY(-200%);
+    }
+}
+
+/* About Section */
+
+.about-section {
+    height: 100vh;
+    background-color: sienna;
+}
+
+.about-section h1 {
+    padding: 60px 140px;
+}
+
+.about-card {
+    display: grid;
+    padding-left: 600px;
+}
+
+.about-info {
+    background-color: blanchedalmond;
+    width: 60%;
+}
