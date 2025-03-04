@@ -122,11 +122,11 @@ span {
 
 .about-section h1 {
     padding: 60px 140px;
+    text-align: center;
 }
 
 .about-card {
     display: grid;
-    padding-left: 600px;
 }
 
 .about-info {
