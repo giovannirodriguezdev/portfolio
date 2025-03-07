@@ -4,10 +4,16 @@
     box-sizing: border-box;
 }
 
+body {
+    display: flex;
+}
+
+/* Nav Menu */
+
 .side-nav {
     display: grid;
     justify-items: center;
-    background-color: pink;
+    background-color: #0C0C0E;
     width: 100px;
     height: 100vh;
     position: fixed;
@@ -18,7 +24,7 @@
 }
 
 .logo {
-
+    color: white;
 }
 
 .nav-menu {
@@ -26,11 +32,12 @@
     padding: 0;
     display: grid;
     justify-items: center;
-    
+    gap: 20px;
 }
 
 li a {
     text-decoration: none;
+    color: white;
 }
 
 .menu-toggle {
@@ -41,6 +48,15 @@ li a {
     cursor: pointer;
     padding: 10px 15px;
     border: none;
+    border-radius: 10px;
+    background-color: #202123;
+    color: white;
+}
+
+.main-content {
+    margin-left: 100px;
+    width: calc(100% - 100px);
+    transition: margin-lef .3 ease-in-out;
 }
 
 @media screen and (max-width: 768px) {
@@ -56,8 +72,9 @@ li a {
         transform: translateX(0);
     }
 
-    .content {
+    .main-content {
         margin-left: 0;
+        width: 100%;
     }
 }
 
@@ -68,7 +85,11 @@ li a {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: aquamarine;
+    background: url(images/sep09.jpg) center/cover no-repeat;
+}
+
+.home-card h1 {
+    color: white;
 }
 
 .titles {
@@ -77,7 +98,6 @@ li a {
     height: 30px;
     justify-content: center;
     /* padding: 50px 50px; */
-
     /* box-shadow: 0 20px rgba(0, 0, 0, .2); */
 }
 
@@ -89,10 +109,20 @@ span {
     display: block;
     height: 100%;
     font-size: 24px;
-    color: blue;
+    color: orangered;
     font-weight: bold;
     text-align: center;
     animation: spin_words 6s infinite;
+}
+
+.socials {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.socials img {
+    width: 30px;
 }
 
 @keyframes spin_words {
@@ -126,7 +156,8 @@ span {
 }
 
 .about-card {
-    display: grid;
+    display: flex;
+    justify-content: center;
 }
 
 .about-info {
